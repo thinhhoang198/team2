@@ -61,7 +61,10 @@ namespace MyGame
                 return _ai;
             }
         }
-
+        /// <summary> *
+        /// Ends the game if player exits.
+        /// Shows the main menu.
+        /// </summary>
         static GameController()
         {
             //bottom state will be quitting. If player exits main menu then the game is over
