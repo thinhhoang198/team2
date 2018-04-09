@@ -238,6 +238,7 @@ namespace MyGame
         /// </summary>
         /// <value>The message to display</value>
         /// <returns>The message to display</returns>
+        
         public static string Message
         {
             get
@@ -283,18 +284,35 @@ namespace MyGame
 
             SwinGame.DrawFramerate(675, 585);
         }
+        
+        /// <summary> *
+        /// Adds explosion to the screen (animation resource).
+        /// </summary>
 
         public static void AddExplosion(int row, int col)
         {
             AddAnimation(row, col, "Splash");
         }
-
+        
+        /// <summary> *
+        /// Adds splash to the screen (animation resource).
+        /// </summary>
+        /// <param name="row"> </param>
+        /// <param name="col"> </param>
+        
         public static void AddSplash(int row, int col)
         {
             AddAnimation(row, col, "Splash");
         }
 
         private static List<Sprite> _Animations = new List<Sprite>();
+        
+        /// <summary> *
+        /// Adds animation to the screens.
+        /// </summary>
+        /// <param name="row"> </param>
+        /// <param name="col"> </param>
+        /// <param name="image"> name of image </param>
 
         private static void AddAnimation(int row, int col, string image)
         {
@@ -314,6 +332,10 @@ namespace MyGame
             s.StartAnimation("splash");
             _Animations.Add(s);
         }
+        
+        /// <summary> *
+        /// Updates new animations.
+        /// </summary>
 
         public static void UpdateAnimations()
         {
@@ -333,6 +355,10 @@ namespace MyGame
                 SwinGame.FreeSprite(s);
             }
         }
+        
+        /// <summary> *
+        /// Draws new animations to the screen.
+        /// </summary>
 
         public static void DrawAnimations()
         {
@@ -341,6 +367,10 @@ namespace MyGame
                 SwinGame.DrawSprite(s);
             }
         }
+        
+        /// <summary> *
+        /// Runs the sequence of drawing new animation.
+        /// </summary>
 
         public static void DrawAnimationSequence()
         {
