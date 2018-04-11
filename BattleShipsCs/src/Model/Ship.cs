@@ -81,6 +81,11 @@ namespace MyGame
             }
         }
 
+	/// <summary>
+	/// The column location of the ship
+	/// </summary>
+	/// <value>The topmost location of the ship</value>
+	/// <returns>the column of the ship</returns>
         public int Column
         {
             get
@@ -89,6 +94,9 @@ namespace MyGame
             }
         }
 
+	/// <summary>
+	/// The direction of the ship
+	/// </summary>
         public Direction Direction
         {
             get
@@ -127,6 +135,9 @@ namespace MyGame
             _tiles.Clear();
         }
 
+	/// <summary>
+	/// increase _hitsTaken when ship is hit
+	/// </summary>
         public void Hit()
         {
             _hitsTaken++;
@@ -144,6 +155,9 @@ namespace MyGame
             }
         }
 
+	/// <summary>
+	/// IsDestroyed returns true if the ship is destroyed
+	/// </summary>
         public bool IsDestroyed
         {
             get

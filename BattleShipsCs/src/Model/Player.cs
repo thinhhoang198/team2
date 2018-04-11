@@ -108,6 +108,9 @@ namespace MyGame
             }
         }
 
+	/// <summary>
+	/// IsDestroyed return true if ship is destroyed
+	/// </summary>
         public bool IsDestroyed
         {
             get
@@ -147,6 +150,9 @@ namespace MyGame
             }
         }
 
+	/// <summary>
+	/// The number of hits the player has made
+	/// </summary>
         public int Hits
         {
             get
@@ -167,6 +173,10 @@ namespace MyGame
                 return _misses;
             }
         }
+
+	/// <summary>
+	/// Score player get
+	/// </summary>
 
         public int Score
         {
@@ -214,6 +224,9 @@ namespace MyGame
             return this.GetEnumerator1();
         }
 
+	/// <summary>
+	/// Make enum list of ships and return it
+	/// </summary>
         public IEnumerator<Ship> GetEnumerator1()
         {
             Ship[] result = new Ship[_Ships.Values.Count + 1];
@@ -257,6 +270,9 @@ namespace MyGame
             return result;
         }
 
+	/// <summary>
+	/// deplay ships randomly
+	/// </summary>
         public virtual void RandomizeDeployment()
         {
             bool placementSuccessful = false;
