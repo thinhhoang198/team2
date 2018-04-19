@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -254,10 +254,12 @@ namespace MyGame
         /// <returns>the result of the attack</returns>
         internal AttackResult Shoot(int row, int col)
         {
-            _shots++;
             AttackResult result = default(AttackResult);
             result = EnemyGrid.HitTile(row, col);
-
+            if ((result.Value != ResultOfAttack.ShotAlready))
+            {
+                _shots++;
+            }
             if ((result.Value == ResultOfAttack.Destroyed) || (result.Value == ResultOfAttack.Hit))
             {
                 _hits++;
