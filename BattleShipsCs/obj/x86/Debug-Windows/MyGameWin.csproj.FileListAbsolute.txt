@@ -40,3 +40,21 @@ F:\Code\Development Project\Week5\GameTemplate\bin\Debug\MyGame.pdb
 F:\Code\Development Project\Week5\GameTemplate\bin\Debug\SwinGame.dll
 F:\Code\Development Project\Week5\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csproj.CopyComplete
 F:\Code\Development Project\Week5\GameTemplate\obj\x86\Debug-Windows\MyGameWin.csprojResolveAssemblyReference.cache
+H:\team2\BattleShipsCs\obj\x86\Debug-Windows\MyGameWin.csprojResolveAssemblyReference.cache
+H:\team2\BattleShipsCs\obj\x86\Debug-Windows\MyGameWin.csproj.CoreCompileInputs.cache
+H:\team2\BattleShipsCs\obj\x86\Debug-Windows\MyGame.exe
+H:\team2\BattleShipsCs\obj\x86\Debug-Windows\MyGame.pdb
+H:\team2\BattleShipsCs\bin\Debug\Resources\animations\startup.txt
+H:\team2\BattleShipsCs\bin\Debug\Resources\bundles\FileDialog.txt
+H:\team2\BattleShipsCs\bin\Debug\Resources\bundles\splash.txt
+H:\team2\BattleShipsCs\bin\Debug\Resources\panels\FileDialog.txt
+H:\team2\BattleShipsCs\bin\Debug\Resources\SwinGame.icns
+H:\team2\BattleShipsCs\bin\Debug\Resources\SwinGame.ico
+H:\team2\BattleShipsCs\bin\Debug\MyGame.exe.config
+H:\team2\BattleShipsCs\bin\Debug\MyGame.exe
+H:\team2\BattleShipsCs\bin\Debug\MyGame.pdb
+H:\team2\BattleShipsCs\bin\Debug\SwinGame.dll
+H:\team2an\BattleShipsCs\obj\x86\Debug-Windows\MyGameWin.csprojResolveAssemblyReference.cache
+H:\team2an\BattleShipsCs\obj\x86\Debug-Windows\MyGame.exe
+H:\team2an\BattleShipsCs\obj\x86\Debug-Windows\MyGame.pdb
+H:\team2an\BattleShipsCs\bin\Debug\MyGame.exe.config
