@@ -23,11 +23,6 @@ namespace MyGame
             SwinGame.DrawBitmap(GameResources.GameImage("HelpDeploy"), INSTRUCTION_LEFT, INSTRUCTION_TOP);
         }
 
-        private static void DrawHelpPlay()
-        {
-            SwinGame.DrawBitmap(GameResources.GameImage("HelpPlay"), INSTRUCTION_LEFT, INSTRUCTION_TOP);
-        }
-
         public static void HandleHelpInput()
         {
             if (SwinGame.MouseClicked(MouseButton.LeftButton) ||
