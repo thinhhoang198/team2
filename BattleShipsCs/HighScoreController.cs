@@ -99,7 +99,7 @@ namespace MyGame
         ///
         /// Where NNN is the name and SSS is the score
         /// </remarks>
-        public static void SaveScores()
+        private static void SaveScores()
         {
             string filename = "";
             filename = System.Convert.ToString(SwinGame.PathToResource("highscores.txt"));
@@ -201,17 +201,17 @@ namespace MyGame
                     SwinGame.ProcessEvents();
 
                     UtilityFunctions.DrawBackground();
-                    DrawHighScores();
                     SaveScores();
+                    DrawHighScores();
                     SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, ENTRY_TOP);
                     SwinGame.RefreshScreen();
                 }
 
                 s.Name = System.Convert.ToString(SwinGame.TextReadAsASCII());
 
-                if (s.Name.Length < 3)
+                if (s.Name.Length < 20)
                 {
-                    s.Name = s.Name + new string(' ', 3 - s.Name.Length);
+                    s.Name = s.Name + new string(' ', 20 - s.Name.Length);
                 }
 
                 _Scores.RemoveAt(_Scores.Count - 1);

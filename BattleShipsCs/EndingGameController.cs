@@ -56,7 +56,6 @@ namespace MyGame
                 || SwinGame.KeyTyped(KeyCode.EscapeKey))
             {
                 HighScoreController.ReadHighScore(GameController.HumanPlayer.Score);
-                HighScoreController.SaveScores();
                 GameController.EndCurrentState();
             }
         }

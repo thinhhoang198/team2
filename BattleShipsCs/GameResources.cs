@@ -51,6 +51,12 @@ namespace MyGame
             NewImage("Explosion", "explosion.png");
             NewImage("Splash", "splash.png");
 
+            //Instructions
+            NewImage("HelpDeploy", "help_deploy.png");
+
+            //Back button
+            NewImage("BackButton", "back_button.png");
+
         }
 
         /// <summary> *
@@ -74,7 +80,7 @@ namespace MyGame
 
         private static void LoadMusic()
         {
-            NewMusic("Background", "horrordrone.mp3");
+            NewMusic("Background", "horrordrone.wav");
         }
 
         /// <summary>
@@ -269,7 +275,7 @@ namespace MyGame
             SwinGame.FreeBitmap(_Animation);
             SwinGame.FreeBitmap(_LoaderEmpty);
             SwinGame.FreeBitmap(_LoaderFull);
-            //Audio.FreeSoundEffect(_StartSound);
+            //SwinGame.FreeSoundEffect(_StartSound);
             SwinGame.ChangeScreenSize(width, height);
         }
         
@@ -341,11 +347,11 @@ namespace MyGame
         {
             _Music.Add(musicName, SwinGame.LoadMusic(SwinGame.PathToResource(filename, ResourceKind.MusicResource)));
         }
-        
+
         /// <summary> *
         /// Frees the fonts
         /// <summary>
-        
+
         private static void FreeFonts()
         {
             Font obj = default(Font);

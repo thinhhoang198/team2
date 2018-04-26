@@ -29,6 +29,11 @@ namespace MyGame
         private const int RANDOM_BUTTON_LEFT = 547;
         private const int RANDOM_BUTTON_WIDTH = 51;
 
+        private const int BACK_BUTTON_TOP = 5;
+        private const int BACK_BUTTON_HEIGHT = 46;
+        private const int BACK_BUTTON_LEFT = 5;
+        private const int BACK_BUTTON_WIDTH = 47;
+
         private const int DIR_BUTTONS_WIDTH = 47;
 
         private const int TEXT_OFFSET = 5;
@@ -95,6 +100,10 @@ namespace MyGame
                 {
                     GameController.HumanPlayer.RandomizeDeployment();
                 }
+                else if (UtilityFunctions.IsMouseInRectangle(BACK_BUTTON_LEFT, BACK_BUTTON_TOP, BACK_BUTTON_WIDTH, BACK_BUTTON_HEIGHT))
+                {
+                    GameController.SwitchState(GameState.ViewingMainMenu);
+                }
             }
         }
 
@@ -147,6 +156,8 @@ namespace MyGame
         public static void DrawDeployment()
         {
             UtilityFunctions.DrawField(GameController.HumanPlayer.PlayerGrid, GameController.HumanPlayer, true);
+
+            SwinGame.DrawBitmap(GameResources.GameImage("BackButton"), BACK_BUTTON_LEFT, BACK_BUTTON_TOP);
 
             //Draw the Left/Right and Up/Down buttons
             if (_currentDirection == Direction.LeftRight)

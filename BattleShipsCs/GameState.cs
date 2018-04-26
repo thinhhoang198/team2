@@ -29,6 +29,11 @@ namespace MyGame
         ViewingHighScores,
 
         /// <summary>
+        /// The player is looking at the instructions
+        /// </summary>
+        ShowHelp,
+
+        /// <summary>
         /// The player is altering the game settings
         /// </summary>
         AlteringSettings,

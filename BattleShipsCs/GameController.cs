@@ -331,6 +331,10 @@ namespace MyGame
             {
                 HighScoreController.HandleHighScoreInput();
             }
+            else if (CurrentState == GameState.ShowHelp)
+            {
+                HelpController.HandleHelpInput();
+            }
 
             UtilityFunctions.UpdateAnimations();
         }
@@ -372,6 +376,10 @@ namespace MyGame
             else if (CurrentState == GameState.ViewingHighScores)
             {
                 HighScoreController.DrawHighScores();
+            }
+            else if (CurrentState == GameState.ShowHelp)
+            {
+                HelpController.DrawHelp();
             }
 
             UtilityFunctions.DrawAnimations();
