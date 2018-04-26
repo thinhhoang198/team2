@@ -61,7 +61,7 @@ namespace MyGame
                 return _ai;
             }
         }
-        
+
         /// <summary> *
         /// Ends the game if player exits.
         /// Shows the main menu.
@@ -92,17 +92,24 @@ namespace MyGame
             _theGame = new BattleShipsGame();
 
             //create the players
-            if (_aiSetting == AIOption.Medium)
+            switch (_aiSetting)
             {
-                _ai = new AIMediumPlayer(_theGame);
-            }
-            else if (_aiSetting == AIOption.Hard)
-            {
-                _ai = new AIHardPlayer(_theGame);
-            }
-            else
-            {
-                _ai = new AIHardPlayer(_theGame);
+                case AIOption.Easy:
+                    _ai = new AIEasyPlayer(_theGame);
+                    break;
+
+                case AIOption.Medium:
+                    _ai = new AIMediumPlayer(_theGame);
+                    break;
+
+                case AIOption.Hard:
+                    _ai = new AIHardPlayer(_theGame);
+                    break;
+
+                default:
+                    _ai = new AIHardPlayer(_theGame);
+                    break;
+
             }
 
             _human = new Player(_theGame);
@@ -331,10 +338,6 @@ namespace MyGame
             {
                 HighScoreController.HandleHighScoreInput();
             }
-            else if (CurrentState == GameState.ShowHelp)
-            {
-                HelpController.HandleHelpInput();
-            }
 
             UtilityFunctions.UpdateAnimations();
         }
@@ -376,10 +379,6 @@ namespace MyGame
             else if (CurrentState == GameState.ViewingHighScores)
             {
                 HighScoreController.DrawHighScores();
-            }
-            else if (CurrentState == GameState.ShowHelp)
-            {
-                HelpController.DrawHelp();
             }
 
             UtilityFunctions.DrawAnimations();

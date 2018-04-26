@@ -21,7 +21,7 @@ namespace MyGame
         /// <remarks>
         /// These are the text captions for the menu items.
         /// </remarks>
-        private readonly static string[][] _menuStructure = new string[][] {new string[] {"PLAY", "SETUP", "SCORES","HELP", "QUIT"},
+        private readonly static string[][] _menuStructure = new string[][] {new string[] {"PLAY", "SETUP", "SCORES", "QUIT"},
         new string[] {"RETURN", "SURRENDER", "QUIT"},
         new string[] {"EASY", "MEDIUM", "HARD"}};
 
@@ -40,8 +40,7 @@ namespace MyGame
         private const int MAIN_MENU_PLAY_BUTTON = 0;
         private const int MAIN_MENU_SETUP_BUTTON = 1;
         private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
-        private const int MAIN_MENU_HELP_BUTTON = 3;
-        private const int MAIN_MENU_QUIT_BUTTON = 4;
+        private const int MAIN_MENU_QUIT_BUTTON = 3;
 
         private const int SETUP_MENU_EASY_BUTTON = 0;
         private const int SETUP_MENU_MEDIUM_BUTTON = 1;
@@ -158,9 +157,9 @@ namespace MyGame
         {
             //Clears the Screen to Black
             //SwinGame.DrawText("Settings", Color.White, GameFont("ArialLarge"), 50, 50)
-            DrawButtons(SETUP_MENU, 1, 1);
+
             DrawButtons(MAIN_MENU);
-            
+            DrawButtons(SETUP_MENU, 1, 1);
         }
 
         /// <summary>
@@ -202,7 +201,7 @@ namespace MyGame
                 toDraw.Height = BUTTON_HEIGHT;
                 SwinGame.DrawText(_menuStructure[menu][i], MENU_COLOR, Color.Black, GameResources.GameFont("Menu"), FontAlignment.AlignCenter, toDraw);
 
-                if (IsMouseOverMenu(i, level, xOffset))
+                if (SwinGame.MouseClicked(MouseButton.LeftButton) && IsMouseOverMenu(i, level, xOffset))
                 {
                     SwinGame.DrawRectangle(HIGHLIGHT_COLOR, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
                 }
@@ -272,9 +271,6 @@ namespace MyGame
                 case MAIN_MENU_TOP_SCORES_BUTTON:
                     GameController.AddNewState(GameState.ViewingHighScores);
                     break;
-                case MAIN_MENU_HELP_BUTTON:
-                    GameController.AddNewState(GameState.ShowHelp);
-                    break;
                 case MAIN_MENU_QUIT_BUTTON:
                     GameController.EndCurrentState();
                     break;
@@ -290,10 +286,10 @@ namespace MyGame
             switch (button)
             {
                 case SETUP_MENU_EASY_BUTTON:
-                    GameController.SetDifficulty(AIOption.Hard);
+                    GameController.SetDifficulty(AIOption.Easy);
                     break;
                 case SETUP_MENU_MEDIUM_BUTTON:
-                    GameController.SetDifficulty(AIOption.Hard);
+                    GameController.SetDifficulty(AIOption.Medium);
                     break;
                 case SETUP_MENU_HARD_BUTTON:
                     GameController.SetDifficulty(AIOption.Hard);
